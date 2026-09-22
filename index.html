@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Звіти з лабораторних робіт - Дорошенко Назар</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 30px;
+            color: black;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .header-text {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .header-text h1 { font-size: 18px; margin: 0 0 5px 0; text-transform: uppercase; }
+        .header-text h2 { font-size: 16px; margin: 0 0 20px 0; text-transform: uppercase; }
+        .header-text p { font-size: 16px; font-weight: bold; margin: 0; }
+        
+        .photo-container { text-align: center; margin-left: 20px; }
+        .photo-title { font-size: 14px; font-weight: bold; margin-bottom: 5px; }
+        .photo-box { border: 1px solid black; width: 100px; height: 120px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        .top-nav button {
+            border: 1px solid black;
+            background: white;
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-family: inherit;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .top-nav button.active { background-color: yellow; font-weight: bold; }
+
+        .main-content {
+            display: flex;
+            gap: 20px;
+            height: 600px;
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 300px;
+            flex-shrink: 0;
+            overflow-y: auto;
+        }
+        .sidebar a {
+            border: 1px solid black;
+            background: white;
+            border-radius: 30px;
+            padding: 12px 15px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            display: block;
+        }
+        .sidebar a:hover { background-color: #f0f0f0; }
+        .sidebar a.sub-item { margin-left: 40px; width: calc(100% - 75px); padding: 8px 15px; }
+
+        .content-area {
+            border: 1px solid black;
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto; /* Додаємо скрол */
+            scroll-behavior: smooth; /* Плавна прокрутка до розділів */
+            background-color: #fafafa;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .content-section h3 { color: #2c3e50; text-transform: uppercase; font-size: 16px;}
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <div style="width: 120px;"></div>
+        <div class="header-text">
+            <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
+            <h2>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. FRONTEND РОЗРОБКИ»</h2>
+            <p>Виконавець : Студент групи ІА-44 Дорошенко Назар Олександрович</p>
+        </div>
+        <div class="photo-container">
+            <div class="photo-title">Орієнтовний макет</div>
+            <div class="photo-box">[ ВСТАВИТИ<br>ФОТО ]</div>
+        </div>
+    </div>
+
+    <div class="top-nav">
+        <button class="active">Лабораторна<br>робота №1</button>
+        <button>Лабораторна<br>робота №2</button>
+        <button>Лабораторна<br>робота №3</button>
+    </div>
+
+    <div class="main-content">
+        <div class="sidebar">
+            <a href="#topic-theme">Тема, Мета, Місце розташування</a>
+            <a href="#topic-env">Опис предметного середовища</a>
+            <a href="#topic-structure">Структура документа</a>
+            
+            <a href="#topic-table" class="sub-item">HTML-код ТАБЛИЦІ</a>
+            <a href="#topic-image" class="sub-item">HTML-код ЗОБРАЖЕННЯ</a>
+            <a href="#topic-list" class="sub-item">HTML-код СПИСКІВ</a>
+            <a href="#topic-form" class="sub-item">HTML-код ФОРМИ</a>
+            
+            <a href="#topic-conclusions">ВИСНОВКИ</a>
+        </div>
+        
+        <!-- Місце виведення інформації -->
+        <div class="content-area">
+            
+            <div id="topic-theme" class="content-section">
+                <h3>Тема, мета, місце розташування</h3>
+                <p><strong>Тема:</strong> Створення та хостинг WEB-застосунку на GitHub Pages.</p>
+                <p><strong>Мета:</strong> Засвоїти практичні навички створення HTML-документів, використання базових тегів та розміщення веб-сторінок у мережі Інтернет.</p>
+                <p><strong>Місце розташування WEB-застосунку:</strong> <a href="https://enigma123456.github.io/IA-44_appWEB-DoroshenkoNazar-FIOT-2026/" target="_blank">Перейти на сайт</a></p>
+                <p><strong>Місце звітного HTML-документа:</strong> <a href="https://enigma123456.github.io/IA-44_appRECORD-DoroshenkoNazar-FIOT-2026/" target="_blank">Перейти на звіт</a></p>
+                <p><strong>Репозиторій WEB-застосунку (код на GitHub):</strong> <a href="https://github.com/enigma123456/IA-44_appWEB-DoroshenkoNazar-FIOT-2026" target="_blank">Перейти до репозиторію</a></p>
+            </div>
+
+            <div id="topic-env" class="content-section">
+                <h3>Опис предметного середовища та бізнес-логіки</h3>
+                <p>Розроблено платформу для створення та підписання електронних петицій. Система дозволяє користувачам шукати петиції за категоріями (Екологія, Транспорт, Освіта) та переглядати кількість зібраних голосів.</p>
+            </div>
+
+            <div id="topic-structure" class="content-section">
+                <h3>Структура головної сторінки</h3>
+                <p>Головна сторінка складається з шапки (header), основного блоку (main) та підвалу (footer). Використано форму пошуку, маркований список для категорій, таблицю для відображення списку петицій та зображення-логотип.</p>
+                <div class="stub"></div>
+            </div>
+
+            <div id="topic-table" class="content-section">
+                <h3>HTML-код ТАБЛИЦІ</h3>
+                <div class="stub"></div>
+                <div class="stub"></div>
+                <p><strong>Теорія:</strong> Для створення таблиць використовується тег <code>&lt;table&gt;</code>. Рядки створюються тегом <code>&lt;tr&gt;</code>, клітинки-заголовки — <code>&lt;th&gt;</code>, а звичайні клітинки з даними — <code>&lt;td&gt;</code>. Основні атрибути: <i>border</i> (рамка), <i>colspan</i> (об'єднання колонок), <i>rowspan</i> (об'єднання рядків).</p>
+            </div>
+
+            <div id="topic-image" class="content-section">
+                <h3>HTML-код ЗОБРАЖЕННЯ</h3>
+                <div class="stub"></div>
+                <div class="stub"></div>
+                <p><strong>Теорія:</strong> Для вставки зображень використовується одинарний тег <code>&lt;img&gt;</code>. Основні атрибути: <i>src</i> (шлях до файлу або URL), <i>alt</i> (альтернативний текст для скрінрідерів та при помилці завантаження), <i>width</i> та <i>height</i> (ширина та висота).</p>
+            </div>
+
+            <div id="topic-list" class="content-section">
+                <h3>HTML-код СПИСКІВ</h3>
+                <div class="stub"></div>
+                <div class="stub"></div>
+                <p><strong>Теорія:</strong> Марковані списки створюються тегом <code>&lt;ul&gt;</code>, нумеровані — <code>&lt;ol&gt;</code>. Елементи списку позначаються тегом <code>&lt;li&gt;</code>. Атрибут <i>type</i> дозволяє змінити тип маркера (наприклад: circle, square, A, I).</p>
+            </div>
+
+            <div id="topic-form" class="content-section">
+                <h3>HTML-код ФОРМИ</h3>
+                <div class="stub"></div>
+                <div class="stub"></div>
+                <p><strong>Теорія:</strong> Для створення форм використовується парний тег <code>&lt;form&gt;</code> (або контейнер <code>&lt;div&gt;</code> для простих елементів). Основний тег для введення даних — <code>&lt;input&gt;</code>, який є одинарним. За допомогою атрибута <i>type</i> він може приймати різні форми (текстове поле "text", пароль "password", радіокнопка "radio", чекбокс "checkbox"). Кнопки створюються тегом <code>&lt;button&gt;</code>. Атрибут <i>placeholder</i> використовується для виведення тексту-підказки всередині порожнього поля вводу.</p>
+            </div>
+
+            <div id="topic-conclusions" class="content-section">
+                <h3>ВИСНОВКИ</h3>
+                <div class="stub"></div>
+                <p>Засвоїв практичні навички створення HTML-документів, використання базових тегів та розміщення веб-сторінок у мережі Інтернет.</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
