@@ -109,85 +109,229 @@
         </div>
     </div>
 
-    <div class="top-nav">
-        <button class="active">Лабораторна<br>робота №1</button>
-        <button>Лабораторна<br>робота №2</button>
-        <button>Лабораторна<br>робота №3</button>
+    <nav class="top-nav">
+        <button onclick="showLab('lab1')">Лабораторна робота №1</button>
+        <button onclick="showLab('lab2')">Лабораторна робота №2</button>
+    </nav>
+
+    <div id="lab1" class="lab-content">
+        <div class="main-content">
+            <div class="sidebar">
+                <a href="#topic-theme">Тема, Мета, Місце розташування</a>
+                <a href="#topic-env">Опис предметного середовища</a>
+                <a href="#topic-structure">Структура документа</a>
+                
+                <a href="#topic-table" class="sub-item">HTML-код ТАБЛИЦІ</a>
+                <a href="#topic-image" class="sub-item">HTML-код ЗОБРАЖЕННЯ</a>
+                <a href="#topic-list" class="sub-item">HTML-код СПИСКІВ</a>
+                <a href="#topic-form" class="sub-item">HTML-код ФОРМИ</a>
+                
+                <a href="#topic-conclusions">ВИСНОВКИ</a>
+            </div>
+            
+            <!-- Місце виведення інформації -->
+            <div class="content-area">
+                
+                <div id="topic-theme" class="content-section">
+                    <h3>Тема, мета, місце розташування</h3>
+                    <p><strong>Тема:</strong> Створення та хостинг WEB-застосунку на GitHub Pages.</p>
+                    <p><strong>Мета:</strong> Засвоїти практичні навички створення HTML-документів, використання базових тегів та розміщення веб-сторінок у мережі Інтернет.</p>
+                    <p><strong>Місце розташування WEB-застосунку:</strong> <a href="https://enigma123456.github.io/IA-44_appWEB-DoroshenkoNazar-FIOT-2026/" target="_blank">Перейти на сайт</a></p>
+                    <p><strong>Місце звітного HTML-документа:</strong> <a href="https://enigma123456.github.io/IA-44_appRECORD-DoroshenkoNazar-FIOT-2026/" target="_blank">Перейти на звіт</a></p>
+                    <p><strong>Репозиторій WEB-застосунку (код на GitHub):</strong> <a href="https://github.com/enigma123456/IA-44_appWEB-DoroshenkoNazar-FIOT-2026" target="_blank">Перейти до репозиторію</a></p>
+                </div>
+
+                <div id="topic-env" class="content-section">
+                    <h3>Опис предметного середовища та бізнес-логіки</h3>
+                    <p>Розроблено платформу для створення та підписання електронних петицій. Система дозволяє користувачам шукати петиції за категоріями (Екологія, Транспорт, Освіта) та переглядати кількість зібраних голосів.</p>
+                </div>
+
+                <div id="topic-structure" class="content-section">
+                    <h3>Структура головної сторінки</h3>
+                    <p>Головна сторінка складається з шапки (header), основного блоку (main) та підвалу (footer). Використано форму пошуку, маркований список для категорій, таблицю для відображення списку петицій та зображення-логотип.</p>
+                    <div class="stub"></div>
+                </div>
+
+                <div id="topic-table" class="content-section">
+                    <h3>HTML-код ТАБЛИЦІ</h3>
+                    <div class="stub"></div>
+                    <div class="stub"></div>
+                    <p><strong>Теорія:</strong> Для створення таблиць використовується тег <code>&lt;table&gt;</code>. Рядки створюються тегом <code>&lt;tr&gt;</code>, клітинки-заголовки — <code>&lt;th&gt;</code>, а звичайні клітинки з даними — <code>&lt;td&gt;</code>. Основні атрибути: <i>border</i> (рамка), <i>colspan</i> (об'єднання колонок), <i>rowspan</i> (об'єднання рядків).</p>
+                </div>
+
+                <div id="topic-image" class="content-section">
+                    <h3>HTML-код ЗОБРАЖЕННЯ</h3>
+                    <div class="stub"></div>
+                    <div class="stub"></div>
+                    <p><strong>Теорія:</strong> Для вставки зображень використовується одинарний тег <code>&lt;img&gt;</code>. Основні атрибути: <i>src</i> (шлях до файлу або URL), <i>alt</i> (альтернативний текст для скрінрідерів та при помилці завантаження), <i>width</i> та <i>height</i> (ширина та висота).</p>
+                </div>
+
+                <div id="topic-list" class="content-section">
+                    <h3>HTML-код СПИСКІВ</h3>
+                    <div class="stub"></div>
+                    <div class="stub"></div>
+                    <p><strong>Теорія:</strong> Марковані списки створюються тегом <code>&lt;ul&gt;</code>, нумеровані — <code>&lt;ol&gt;</code>. Елементи списку позначаються тегом <code>&lt;li&gt;</code>. Атрибут <i>type</i> дозволяє змінити тип маркера (наприклад: circle, square, A, I).</p>
+                </div>
+
+                <div id="topic-form" class="content-section">
+                    <h3>HTML-код ФОРМИ</h3>
+                    <div class="stub"></div>
+                    <div class="stub"></div>
+                    <p><strong>Теорія:</strong> Для створення форм використовується парний тег <code>&lt;form&gt;</code> (або контейнер <code>&lt;div&gt;</code> для простих елементів). Основний тег для введення даних — <code>&lt;input&gt;</code>, який є одинарним. За допомогою атрибута <i>type</i> він може приймати різні форми (текстове поле "text", пароль "password", радіокнопка "radio", чекбокс "checkbox"). Кнопки створюються тегом <code>&lt;button&gt;</code>. Атрибут <i>placeholder</i> використовується для виведення тексту-підказки всередині порожнього поля вводу.</p>
+                </div>
+
+                <div id="topic-conclusions" class="content-section">
+                    <h3>ВИСНОВКИ</h3>
+                    <div class="stub"></div>
+                    <p>Засвоїв практичні навички створення HTML-документів, використання базових тегів та розміщення веб-сторінок у мережі Інтернет.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="main-content">
-        <div class="sidebar">
-            <a href="#topic-theme">Тема, Мета, Місце розташування</a>
-            <a href="#topic-env">Опис предметного середовища</a>
-            <a href="#topic-structure">Структура документа</a>
-            
-            <a href="#topic-table" class="sub-item">HTML-код ТАБЛИЦІ</a>
-            <a href="#topic-image" class="sub-item">HTML-код ЗОБРАЖЕННЯ</a>
-            <a href="#topic-list" class="sub-item">HTML-код СПИСКІВ</a>
-            <a href="#topic-form" class="sub-item">HTML-код ФОРМИ</a>
-            
-            <a href="#topic-conclusions">ВИСНОВКИ</a>
-        </div>
-        
-        <!-- Місце виведення інформації -->
-        <div class="content-area">
-            
-            <div id="topic-theme" class="content-section">
-                <h3>Тема, мета, місце розташування</h3>
-                <p><strong>Тема:</strong> Створення та хостинг WEB-застосунку на GitHub Pages.</p>
-                <p><strong>Мета:</strong> Засвоїти практичні навички створення HTML-документів, використання базових тегів та розміщення веб-сторінок у мережі Інтернет.</p>
-                <p><strong>Місце розташування WEB-застосунку:</strong> <a href="https://enigma123456.github.io/IA-44_appWEB-DoroshenkoNazar-FIOT-2026/" target="_blank">Перейти на сайт</a></p>
-                <p><strong>Місце звітного HTML-документа:</strong> <a href="https://enigma123456.github.io/IA-44_appRECORD-DoroshenkoNazar-FIOT-2026/" target="_blank">Перейти на звіт</a></p>
-                <p><strong>Репозиторій WEB-застосунку (код на GitHub):</strong> <a href="https://github.com/enigma123456/IA-44_appWEB-DoroshenkoNazar-FIOT-2026" target="_blank">Перейти до репозиторію</a></p>
-            </div>
+    <div id="lab2" class="lab-content" style="display: none;">
+            <div class="main-content">
+                
+                <div class="sidebar">
+                    <a href="#lab2-theme">Тема, Мета ЛР №2</a>
+                    <a href="#lab2-styles">Способи підключення стилів</a>
+                    <a href="#lab2-selectors-tag" class="sub-item">Селектори тегу</a>
+                    <a href="#lab2-selectors-class" class="sub-item">Селектори класу</a>
+                    <a href="#lab2-selectors-id" class="sub-item">Селектори ідентифікаторів</a>
+                    <a href="#lab2-selectors-other" class="sub-item">Інші селектори</a>
+                    <a href="#lab2-css-advanced">CSS: Шрифти, Текст, Таблиці...</a>
+                    <a href="#lab2-conclusions">ВИСНОВКИ до ЛР №2</a>
+                </div>
 
-            <div id="topic-env" class="content-section">
-                <h3>Опис предметного середовища та бізнес-логіки</h3>
-                <p>Розроблено платформу для створення та підписання електронних петицій. Система дозволяє користувачам шукати петиції за категоріями (Екологія, Транспорт, Освіта) та переглядати кількість зібраних голосів.</p>
-            </div>
+                <div class="content-area">
+                    <div id="lab2-theme" class="content-section">
+                        <h3>Тема, мета ЛР №2</h3>
+                        <p><strong>Тема:</strong> КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ ТЕГУ, КЛАСУ, ІДЕНТИФІКАТОРА. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ[cite: 3].</p>
+                        <p><strong>Мета:</strong> Придбати практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів[cite: 3].</p>
+                        <p><strong>Місце розташування WEB-застосунку:</strong> <a href="https://enigma123456.github.io/IA-44_appWEB-DoroshenkoNazar-FIOT-2026/" target="_blank">Перейти на сайт</a></p>
+                        <p><strong>Місце звітного HTML-документа:</strong> <a href="https://enigma123456.github.io/IA-44_appRECORD-DoroshenkoNazar-FIOT-2026/" target="_blank">Перейти на звіт</a></p>
+                    </div>
 
-            <div id="topic-structure" class="content-section">
-                <h3>Структура головної сторінки</h3>
-                <p>Головна сторінка складається з шапки (header), основного блоку (main) та підвалу (footer). Використано форму пошуку, маркований список для категорій, таблицю для відображення списку петицій та зображення-логотип.</p>
-                <div class="stub"></div>
-            </div>
+                    <div id="lab2-styles" class="content-section">
+                        <h3>Способи підключення стилів</h3>
+                        <p>У даному WEB-застосунку використано внутрішній спосіб підключення каскадних таблиць стилів за допомогою тегу <code>&lt;style&gt;</code>, який розміщено всередині секції <code>&lt;head&gt;</code> HTML-документа. Також використано зовнішнє підключення для шрифту з Google Fonts за допомогою тегу <code>&lt;link&gt;</code>.</p>
+                    </div>
 
-            <div id="topic-table" class="content-section">
-                <h3>HTML-код ТАБЛИЦІ</h3>
-                <div class="stub"></div>
-                <div class="stub"></div>
-                <p><strong>Теорія:</strong> Для створення таблиць використовується тег <code>&lt;table&gt;</code>. Рядки створюються тегом <code>&lt;tr&gt;</code>, клітинки-заголовки — <code>&lt;th&gt;</code>, а звичайні клітинки з даними — <code>&lt;td&gt;</code>. Основні атрибути: <i>border</i> (рамка), <i>colspan</i> (об'єднання колонок), <i>rowspan</i> (об'єднання рядків).</p>
-            </div>
+                    <div id="lab2-selectors-tag" class="content-section">
+                        <h3>Селектори тегу</h3>
+                        <p><strong>HTML-код:</strong></p>
+                            <pre><code>&lt;header&gt;
+                                &lt;img src="Книга.svg" alt="Книга"&gt;
+                                &lt;h1 id="main-title"&gt;Платформа петицій&lt;/h1&gt;
+                            &lt;/header&gt;</code></pre>
+                                                <p><strong>CSS-код:</strong></p>
+                            <pre><code>header {
+                                background-color: #4a3b38;
+                                padding: 15px 40px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            }</code></pre>
+                        <p><strong>Відображення у браузері:</strong></p>
+                        <!-- Заміни src на шлях до твого скріншоту хедера -->
+                        <img src="Photo\Селектор тегу.png" alt="Скріншот селектора тегу" style="max-width: 100%; border: 1px solid #ccc;">
+                    </div>
 
-            <div id="topic-image" class="content-section">
-                <h3>HTML-код ЗОБРАЖЕННЯ</h3>
-                <div class="stub"></div>
-                <div class="stub"></div>
-                <p><strong>Теорія:</strong> Для вставки зображень використовується одинарний тег <code>&lt;img&gt;</code>. Основні атрибути: <i>src</i> (шлях до файлу або URL), <i>alt</i> (альтернативний текст для скрінрідерів та при помилці завантаження), <i>width</i> та <i>height</i> (ширина та висота).</p>
-            </div>
+                    <div id="lab2-selectors-class" class="content-section">
+                        <h3>Селектори класу</h3>
+                        <p><strong>HTML-код:</strong></p>
+                            <pre><code>&lt;div class="search-container"&gt;
+                                &lt;input type="text" placeholder="Пошук"&gt;
+                                &lt;button type="submit"&gt;&amp;#10140;&lt;/button&gt;
+                            &lt;/div&gt;</code></pre>
+                                                <p><strong>CSS-код:</strong></p>
+                            <pre><code>.search-container {
+                                display: flex;
+                                align-items: center;
+                                gap: 15px;
+                                margin-bottom: 40px;
+                            }</code></pre>
+                        <p><strong>Відображення у браузері:</strong></p>
+                        <!-- Заміни src на шлях до твого скріншоту форми пошуку -->
+                        <img src="Photo\Селектор класу.png" alt="Скріншот селектора класу" style="max-width: 100%; border: 1px solid #ccc;">
+                    </div>
 
-            <div id="topic-list" class="content-section">
-                <h3>HTML-код СПИСКІВ</h3>
-                <div class="stub"></div>
-                <div class="stub"></div>
-                <p><strong>Теорія:</strong> Марковані списки створюються тегом <code>&lt;ul&gt;</code>, нумеровані — <code>&lt;ol&gt;</code>. Елементи списку позначаються тегом <code>&lt;li&gt;</code>. Атрибут <i>type</i> дозволяє змінити тип маркера (наприклад: circle, square, A, I).</p>
-            </div>
+                    <div id="lab2-selectors-id" class="content-section">
+                        <h3>Селектори ідентифікаторів</h3>
+                        <p><strong>HTML-код:</strong></p>
+                            <pre><code>&lt;h1 id="main-title"&gt;Платформа петицій&lt;/h1&gt;</code></pre>
+                                                <p><strong>CSS-код:</strong></p>
+                            <pre><code>#main-title {
+                                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                            }</code></pre>
+                        <p><strong>Відображення у браузері:</strong></p>
+                        <!-- Заміни src на шлях до твого скріншоту заголовка -->
+                        <img src="Photo\Селектори ідентифікаторів.png" alt="Скріншот селектора ідентифікатора" style="max-width: 100%; border: 1px solid #ccc;">
+                    </div>
 
-            <div id="topic-form" class="content-section">
-                <h3>HTML-код ФОРМИ</h3>
-                <div class="stub"></div>
-                <div class="stub"></div>
-                <p><strong>Теорія:</strong> Для створення форм використовується парний тег <code>&lt;form&gt;</code> (або контейнер <code>&lt;div&gt;</code> для простих елементів). Основний тег для введення даних — <code>&lt;input&gt;</code>, який є одинарним. За допомогою атрибута <i>type</i> він може приймати різні форми (текстове поле "text", пароль "password", радіокнопка "radio", чекбокс "checkbox"). Кнопки створюються тегом <code>&lt;button&gt;</code>. Атрибут <i>placeholder</i> використовується для виведення тексту-підказки всередині порожнього поля вводу.</p>
-            </div>
+                    <div id="lab2-selectors-other" class="content-section">
+                        <h3>Інші селектори (Універсальний, Атрибута, Дочірній, Сусідній)</h3>
+                        <p><strong>HTML та CSS-код:</strong></p>
+                            <pre><code>/* Універсальний селектор */
+                            * { box-sizing: border-box; }
 
-            <div id="topic-conclusions" class="content-section">
-                <h3>ВИСНОВКИ</h3>
-                <div class="stub"></div>
-                <p>Засвоїв практичні навички створення HTML-документів, використання базових тегів та розміщення веб-сторінок у мережі Інтернет.</p>
-            </div>
+                            /* Селектор атрибута + псевдоклас */
+                            input[type="text"]:focus { outline: 3px solid #4a3b38; }
 
-        </div>
+                            /* Дочірній селектор */
+                            header > img { border-radius: 10px; }
+
+                            /* Сусідній селектор */
+                            h2 + table { margin-top: 10px; }</code></pre>
+                        <p><strong>Відображення у браузері:</strong></p>
+                        <!-- Заміни src на шлях до скріншоту фокусу на інпуті або таблиці -->
+                        <img src="Photo\Інші селектори.png" alt="Скріншот інших селекторів" style="max-width: 100%; border: 1px solid #ccc;">
+                    </div>
+
+                    <div id="lab2-css-advanced" class="content-section">
+                        <h3>CSS: Шрифти, Текст, Таблиці, Фон, Контур, Списки</h3>
+                        <p><strong>Оформлення таблиць та багаторівневих списків:</strong></p>
+                            <pre><code>table {
+                                width: 80%;
+                                margin: 0 auto;
+                                border-collapse: collapse;
+                                background-color: #d6d9dc;
+                                border: 2px solid black;
+                            }
+                            ul.sub-categories {
+                                list-style-type: circle;
+                                padding-left: 20px;
+                                margin-top: 10px;
+                                font-size: 18px;
+                            }</code></pre>
+                        <p><strong>Відображення у браузері:</strong></p>
+                        <!-- Заміни src на шлях до скріншоту списку з категоріями та таблиці -->
+                        <img src="Photo\CSS Шрифти, текст, Таблиці.png" alt="Скріншот списків та таблиць" style="max-width: 100%; border: 1px solid #ccc;">
+                    </div>
+
+                    <div id="lab2-conclusions" class="content-section">
+                        <h3>ВИСНОВКИ до ЛР №2</h3>
+                        <p>Під час виконання лабораторної роботи було здобуто практичні навички роботи з каскадними таблицями стилів (CSS). Успішно застосовано селектори тегу, класу та ідентифікатора, а також складні селектори: дочірній, сусідній та селектор атрибута. Виконано стильове оформлення базових елементів HTML-документа, налаштовано параметри шрифтів, кольору фону, відступів та контурів. Реалізовано оформлення багаторівневих маркованих списків та табличних даних.</p>
+                    </div>
+                </div>
+
+            </div>
     </div>
+
+    <script>
+        function showLab(labId) {
+            // Шукаємо всі елементи з класом lab-content (тобто всі лабораторні)
+            const allLabs = document.querySelectorAll('.lab-content');
+            
+            // Приховуємо їх усі
+            allLabs.forEach(lab => {
+                lab.style.display = 'none';
+            });
+
+            // Показуємо лише ту, id якої передали в кнопку
+            document.getElementById(labId).style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
