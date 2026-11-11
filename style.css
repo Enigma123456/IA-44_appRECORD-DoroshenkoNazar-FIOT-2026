@@ -1,0 +1,87 @@
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 30px;
+            color: black;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .header-text {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .header-text h1 { font-size: 18px; margin: 0 0 5px 0; text-transform: uppercase; }
+        .header-text h2 { font-size: 16px; margin: 0 0 20px 0; text-transform: uppercase; }
+        .header-text p { font-size: 16px; font-weight: bold; margin: 0; }
+        
+        .photo-container { text-align: center; margin-left: 20px; }
+        .photo-title { font-size: 14px; font-weight: bold; margin-bottom: 5px; }
+        .photo-box { border: 1px solid black; width: 100px; height: 120px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        .top-nav button {
+            border: 1px solid black;
+            background: white;
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-family: inherit;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .top-nav button.active { background-color: yellow; font-weight: bold; }
+
+        .main-content {
+            display: flex;
+            gap: 20px;
+            height: 600px;
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 300px;
+            flex-shrink: 0;
+            overflow-y: auto;
+        }
+        .sidebar a {
+            border: 1px solid black;
+            background: white;
+            border-radius: 30px;
+            padding: 12px 15px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            display: block;
+        }
+        .sidebar a:hover { background-color: #f0f0f0; }
+        .sidebar a.sub-item { margin-left: 40px; width: calc(100% - 75px); padding: 8px 15px; }
+
+        .content-area {
+            border: 1px solid black;
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto; /* Додаємо скрол */
+            scroll-behavior: smooth; /* Плавна прокрутка до розділів */
+            background-color: #fafafa;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .content-section h3 { color: #2c3e50; text-transform: uppercase; font-size: 16px;}

@@ -4,95 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Звіти з лабораторних робіт - Дорошенко Назар</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            margin: 30px;
-            color: black;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        .header-text {
-            flex-grow: 1;
-            text-align: center;
-        }
-        .header-text h1 { font-size: 18px; margin: 0 0 5px 0; text-transform: uppercase; }
-        .header-text h2 { font-size: 16px; margin: 0 0 20px 0; text-transform: uppercase; }
-        .header-text p { font-size: 16px; font-weight: bold; margin: 0; }
-        
-        .photo-container { text-align: center; margin-left: 20px; }
-        .photo-title { font-size: 14px; font-weight: bold; margin-bottom: 5px; }
-        .photo-box { border: 1px solid black; width: 100px; height: 120px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-
-        .top-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-            justify-content: center;
-        }
-        .top-nav button {
-            border: 1px solid black;
-            background: white;
-            border-radius: 10px;
-            padding: 10px 15px;
-            font-family: inherit;
-            font-size: 14px;
-            cursor: pointer;
-        }
-        .top-nav button.active { background-color: yellow; font-weight: bold; }
-
-        .main-content {
-            display: flex;
-            gap: 20px;
-            height: 600px;
-        }
-        
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 300px;
-            flex-shrink: 0;
-            overflow-y: auto;
-        }
-        .sidebar a {
-            border: 1px solid black;
-            background: white;
-            border-radius: 30px;
-            padding: 12px 15px;
-            font-family: inherit;
-            font-size: 13px;
-            font-weight: bold;
-            text-decoration: none;
-            color: black;
-            text-align: center;
-            display: block;
-        }
-        .sidebar a:hover { background-color: #f0f0f0; }
-        .sidebar a.sub-item { margin-left: 40px; width: calc(100% - 75px); padding: 8px 15px; }
-
-        .content-area {
-            border: 1px solid black;
-            flex-grow: 1;
-            padding: 20px;
-            overflow-y: auto; /* Додаємо скрол */
-            scroll-behavior: smooth; /* Плавна прокрутка до розділів */
-            background-color: #fafafa;
-        }
-
-        .content-section {
-            margin-bottom: 60px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed #ccc;
-        }
-        .content-section h3 { color: #2c3e50; text-transform: uppercase; font-size: 16px;}
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -105,13 +17,14 @@
         </div>
         <div class="photo-container">
             <div class="photo-title">Орієнтовний макет</div>
-            <div class="photo-box">[ ВСТАВИТИ<br>ФОТО ]</div>
+            <img src="Photo/my-photo.png" alt="Моє фото" style="width: 100px; height: 120px; object-fit: cover; border: 1px solid black;">
         </div>
     </div>
 
     <nav class="top-nav">
         <button onclick="showLab('lab1')">Лабораторна робота №1</button>
         <button onclick="showLab('lab2')">Лабораторна робота №2</button>
+        <button onclick="showLab('lab3')">Лабораторна робота №3</button>
     </nav>
 
     <div id="lab1" class="lab-content">
@@ -234,7 +147,6 @@
                                 align-items: center;
                             }</code></pre>
                         <p><strong>Відображення у браузері:</strong></p>
-                        <!-- Заміни src на шлях до твого скріншоту хедера -->
                         <img src="Photo/Селектор тегу.png" alt="Скріншот селектора тегу" style="max-width: 100%; border: 1px solid #ccc;">
                     </div>
 
@@ -253,7 +165,6 @@
                                 margin-bottom: 40px;
                             }</code></pre>
                         <p><strong>Відображення у браузері:</strong></p>
-                        <!-- Заміни src на шлях до твого скріншоту форми пошуку -->
                         <img src="Photo/Селектор класу.png" alt="Скріншот селектора класу" style="max-width: 100%; border: 1px solid #ccc;">
                     </div>
 
@@ -266,7 +177,6 @@
                                 text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
                             }</code></pre>
                         <p><strong>Відображення у браузері:</strong></p>
-                        <!-- Заміни src на шлях до твого скріншоту заголовка -->
                         <img src="Photo/Селектори ідентифікаторів.png" alt="Скріншот селектора ідентифікатора" style="max-width: 100%; border: 1px solid #ccc;">
                     </div>
 
@@ -285,7 +195,6 @@
                             /* Сусідній селектор */
                             h2 + table { margin-top: 10px; }</code></pre>
                         <p><strong>Відображення у браузері:</strong></p>
-                        <!-- Заміни src на шлях до скріншоту фокусу на інпуті або таблиці -->
                         <img src="Photo/Інші селектори.png" alt="Скріншот інших селекторів" style="max-width: 100%; border: 1px solid #ccc;">
                     </div>
 
@@ -316,6 +225,208 @@
                 </div>
 
             </div>
+    </div>
+
+    <div id="lab3" class="lab-content" style="display: none;">
+        <div class="main-content">
+            
+            <div class="sidebar">
+                <a href="#lab3-theme">Тема, Мета ЛР №3</a>
+                <a href="#lab3-task1">Завдання №1 (Власний сайт)</a>
+                <a href="#lab3-task2" class="sub-item">Завдання №2 (Таблиці та Блоки)</a>
+                <a href="#lab3-task3" class="sub-item">Завдання №3 (Flexbox Варіант 5)</a>
+                <a href="#lab3-conclusions">ВИСНОВКИ до ЛР №3</a>
+            </div>
+
+            <div class="content-area">
+                
+                <div id="lab3-theme" class="content-section">
+                    <h3>Тема, мета, місце розташування ЛР №3</h3>
+                    <p><strong>Тема:</strong> ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА. ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX. АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ.</p>
+                    <p><strong>Мета:</strong> Придбати практичні навички верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з'ясувати переваги та недоліки типів макетів веб-сторінок, придбати навички адаптивної верстки та роботи з FLEXBOX.</p>
+                    <p><strong>Місце розташування WEB-застосунку:</strong> <a href="https://enigma123456.github.io/IA-44_appWEB-DoroshenkoNazar-FIOT-2026/" target="_blank">Перейти на сайт</a></p>
+                    <p><strong>Місце звітного HTML-документа:</strong> <a href="https://enigma123456.github.io/IA-44_appRECORD-DoroshenkoNazar-FIOT-2026/" target="_blank">Перейти на звіт</a></p>
+                    <p><strong>Репозиторій WEB-застосунку (код на GitHub):</strong> <a href="https://github.com/enigma123456/IA-44_appWEB-DoroshenkoNazar-FIOT-2026" target="_blank">Перейти до репозиторію</a></p>
+                </div>
+
+                <div id="lab3-task1" class="content-section">
+                    <h3>Завдання №1 (Вдосконалення власного сайту)</h3>
+                    <p>Було розділено HTML та CSS по двох різних файлах. Застосовано адаптивний макет на основі технології Flexbox. Використано медіа-запити для планшетів та смартфонів, а також реалізовано компактне бургер-меню.</p>
+                    
+                    <p><strong>Відображення головної сторінки у браузері:</strong></p>
+                    <img src="Photo/Скріншот власного сайту.png" alt="Скріншот власного сайту" style="max-width: 100%; border: 1px solid #ccc;">
+
+                    <p><strong>HTML-код (index.html):</strong></p>
+                    <pre style="background: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto;"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Платформа петицій&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;div class="header-left"&gt;
+            &lt;img src="Книга.svg" alt="Логотип"&gt;
+            &lt;h1&gt;Платформа петицій&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;div class="header-right"&gt;
+            &lt;nav class="burger-menu"&gt;
+                &lt;input type="checkbox" id="burger-toggle"&gt;
+                &lt;label for="burger-toggle" class="burger-icon"&gt;&amp;#9776;&lt;/label&gt;
+                &lt;ul class="menu-links"&gt;
+                    &lt;li&gt;&lt;a href="#"&gt;FAQ (Часті питання)&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;div class="main-layout"&gt;
+            &lt;div class="left-column"&gt;
+                &lt;!-- Контент категорій та таблиці петицій --&gt;
+            &lt;/div&gt;
+            &lt;aside class="right-column sidebar"&gt;
+                &lt;h3&gt;Останні відповіді на петиції&lt;/h3&gt;
+            &lt;/aside&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                    <p><strong>CSS-код (style.css - фрагмент Flexbox та медіа-запитів):</strong></p>
+                    <pre style="background: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto;"><code>header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-layout {
+    display: flex;
+    gap: 40px;
+}
+.left-column { flex: 7; }
+.right-column { flex: 3; }
+
+@media (max-width: 992px) {
+    .main-layout { flex-direction: column; }
+    .right-column { width: 100%; }
+}
+@media (max-width: 768px) {
+    header { flex-direction: column; }
+}</code></pre>
+                </div>
+
+                <div id="lab3-task2" class="content-section">
+                    <h3>Завдання №2 (Таблична та блокова верстка)</h3>
+                    <p>Виконано розмітку за допомогою таблиці (Варіант 5) та плаваючих блоків (Варіант 6) — фіксовані та гумові макети.</p>
+                    
+                    <p><strong>Відображення макетів у браузері:</strong></p>
+                    <img src="Photo/task2-1.png" alt="Скріншоти завдання 2.1" style="max-width: 100%; border: 1px solid #ccc;">
+                    <img src="Photo/task2-2.png" alt="Скріншоти завдання 2.2" style="max-width: 100%; border: 1px solid #ccc;">
+                    <img src="Photo/task2-3.png" alt="Скріншоти завдання 2.3" style="max-width: 100%; border: 1px solid #ccc;">
+                    <img src="Photo/task2-4.png" alt="Скріншоти завдання 2.4" style="max-width: 100%; border: 1px solid #ccc;">
+
+                    <p><strong>HTML-код виконання (фрагмент таблиці та блоків):</strong></p>
+                    <pre style="background: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto;"><code>&lt;!-- ФІКСОВАНА ТАБЛИЧНА ВЕРСТКА (Варіант 5) --&gt;
+&lt;table style="width: 800px; border-collapse: collapse;"&gt;
+    &lt;tr&gt;
+        &lt;td colspan="4" style="background-color: #ffcc00; height: 60px;"&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr style="height: 230px;"&gt;
+        &lt;td style="background-color: #3366ff; width: 200px;"&gt;2&lt;/td&gt;
+        &lt;td style="background-color: #ff4d4d; width: 200px;"&gt;3&lt;/td&gt;
+        &lt;td style="background-color: #ffffff; width: 200px;"&gt;4&lt;/td&gt;
+        &lt;td style="background-color: #ff4d4d; width: 200px;"&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan="4" style="background-color: #ffcc00; height: 60px;"&gt;6&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;!-- ГУМОВА БЛОКОВА ВЕРСТКА (Варіант 6) --&gt;
+&lt;div style="width: 100%; box-sizing: border-box;"&gt;
+    &lt;div style="background-color: #ffcc00; height: 60px;"&gt;1&lt;/div&gt;
+    &lt;div style="height: 230px; width: 100%;"&gt;
+        &lt;div style="float: left; width: 25%; height: 100%; background-color: #3366ff;"&gt;2&lt;/div&gt;
+        &lt;div style="float: left; width: 25%; height: 100%; background-color: #ff4d4d;"&gt;3&lt;/div&gt;
+        &lt;div style="float: left; width: 25%; height: 100%; background-color: #ffffff;"&gt;4&lt;/div&gt;
+        &lt;div style="float: left; width: 25%; height: 100%; background-color: #ff4d4d;"&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div style="clear: both; background-color: #ffcc00; height: 60px;"&gt;6&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+
+                <div id="lab3-task3" class="content-section">
+                    <h3>Завдання №3 (FLEXBOX макет Варіант 5)</h3>
+                    <p>Відтворено дизайн-макет суто за допомогою технології Flexbox.</p>
+                    
+                    <p><strong>Відображення сторінки Flexbox у браузері:</strong></p>
+                    <img src="Photo/Скріншот макету Flexbox.png" alt="Скріншот макету Flexbox" style="max-width: 100%; border: 1px solid #ccc;">
+
+                    <p><strong>HTML-код (task3.html):</strong></p>
+                    <pre style="background: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto;"><code>&lt;section class="skills-section"&gt;
+    &lt;h2&gt;ЩО ВИ ОПАНУЄТЕ?&lt;/h2&gt;
+    &lt;div class="skills-container"&gt;
+        &lt;div class="skill-item"&gt;HTML/CSS&lt;/div&gt;
+        &lt;div class="skill-item"&gt;JAVASCRIPT&lt;/div&gt;
+        &lt;div class="skill-item"&gt;REACT&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class="guarantee-section"&gt;
+    &lt;div class="flex-container single-column-content"&gt;
+        &lt;div class="text-content"&gt;
+            &lt;h3&gt;МИ ГАРАНТУЄМО НАШИМ ВИПУСКНИКАМ ПРАЦЕВЛАШТУВАННЯ&lt;br&gt;
+            &lt;span class="highlight"&gt;В НЕ ЗАЛЕЖНОСТІ ВІД ВІКУ&lt;/span&gt;&lt;/h3&gt;
+            &lt;div class="features-grid"&gt;
+                &lt;div class="feature-item"&gt;
+                    &lt;h4&gt;НАВІТЬ У ЗРІЛОМУ ВІЦІ&lt;/h4&gt;
+                    &lt;p&gt;В Україні поширений міф про те, що тільки молоді люди...&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;footer class="site-footer"&gt;
+    &lt;div class="copyright"&gt;2021&lt;/div&gt;
+    &lt;div class="social-icons"&gt;
+        &lt;div class="icon"&gt;f&lt;/div&gt;
+        &lt;div class="icon"&gt;vk&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
+
+                    <p><strong>CSS-код (task3.css):</strong></p>
+                    <pre style="background: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto;"><code>.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.flex-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .features-grid { flex-direction: column; }
+    .feature-item { width: 100%; }
+}</code></pre>
+                </div>
+
+                <div id="lab3-conclusions" class="content-section">
+                    <h3>ВИСНОВКИ до ЛР №3</h3>
+                    <p>Під час виконання лабораторної роботи було здобуто практичні навички роботи з блоковою та табличною версткою. З'ясовано переваги гумових макетів (у відсотках) над фіксованими (у пікселях), оскільки вони краще адаптуються до розмірів вікна браузера. Успішно застосовано технологію Flexbox для створення гнучких сіток та вирівнювання елементів без використання застарілої властивості float. Впроваджено медіа-запити (@media) для створення повноцінно адаптивного інтерфейсу власного веб-застосунку під різні пристрої.</p>
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <script>
